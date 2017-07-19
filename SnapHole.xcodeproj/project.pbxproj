@@ -1,0 +1,1021 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C7B8EBA87CE35261F10A7CF /* Pods_SnapHole.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C80402E9B984081F6267BA0 /* Pods_SnapHole.framework */; };
+		E928BC641E7EFE3B004A2369 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E928BC551E7EFE09004A2369 /* Alamofire.framework */; };
+		E928BC981E7EFF1D004A2369 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E928BC8B1E7EFF0B004A2369 /* AlamofireImage.framework */; };
+		E93765F21E7EE02D00A34D51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93765F11E7EE02D00A34D51 /* AppDelegate.swift */; };
+		E93765F41E7EE02D00A34D51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93765F31E7EE02D00A34D51 /* ViewController.swift */; };
+		E93765F71E7EE02D00A34D51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93765F51E7EE02D00A34D51 /* Main.storyboard */; };
+		E93765FA1E7EE02D00A34D51 /* SnapHole.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E93765F81E7EE02D00A34D51 /* SnapHole.xcdatamodeld */; };
+		E93765FC1E7EE02D00A34D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93765FB1E7EE02D00A34D51 /* Assets.xcassets */; };
+		E93765FF1E7EE02D00A34D51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93765FD1E7EE02D00A34D51 /* LaunchScreen.storyboard */; };
+		E937660A1E7EE02D00A34D51 /* SnapHoleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93766091E7EE02D00A34D51 /* SnapHoleTests.swift */; };
+		E93766151E7EE02D00A34D51 /* SnapHoleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93766141E7EE02D00A34D51 /* SnapHoleUITests.swift */; };
+		E95CB0A81E8C783700ECF938 /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0931E8C783700ECF938 /* Close.png */; };
+		E95CB0A91E8C783700ECF938 /* Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0941E8C783700ECF938 /* Close@2x.png */; };
+		E95CB0AA1E8C783700ECF938 /* Close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0951E8C783700ECF938 /* Close@3x.png */; };
+		E95CB0AB1E8C783700ECF938 /* Focus.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0961E8C783700ECF938 /* Focus.png */; };
+		E95CB0AC1E8C783700ECF938 /* Focus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0971E8C783700ECF938 /* Focus@2x.png */; };
+		E95CB0AD1E8C783700ECF938 /* Focus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0981E8C783700ECF938 /* Focus@3x.png */; };
+		E95CB0AE1E8C783700ECF938 /* Love.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0991E8C783700ECF938 /* Love.png */; };
+		E95CB0AF1E8C783700ECF938 /* Love@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB09A1E8C783700ECF938 /* Love@2x.png */; };
+		E95CB0B01E8C783700ECF938 /* Love@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB09B1E8C783700ECF938 /* Love@3x.png */; };
+		E95CB0B11E8C783700ECF938 /* Pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB09C1E8C783700ECF938 /* Pencil.png */; };
+		E95CB0B21E8C783700ECF938 /* Pencil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB09D1E8C783700ECF938 /* Pencil@2x.png */; };
+		E95CB0B31E8C783700ECF938 /* Pencil@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB09E1E8C783700ECF938 /* Pencil@3x.png */; };
+		E95CB0B41E8C783700ECF938 /* Picture.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB09F1E8C783700ECF938 /* Picture.png */; };
+		E95CB0B51E8C783700ECF938 /* Picture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0A01E8C783700ECF938 /* Picture@2x.png */; };
+		E95CB0B61E8C783700ECF938 /* Picture@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0A11E8C783700ECF938 /* Picture@3x.png */; };
+		E95CB0B71E8C783700ECF938 /* Sign.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0A21E8C783700ECF938 /* Sign.png */; };
+		E95CB0B81E8C783700ECF938 /* Sign@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0A31E8C783700ECF938 /* Sign@2x.png */; };
+		E95CB0B91E8C783700ECF938 /* Sign@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0A41E8C783700ECF938 /* Sign@3x.png */; };
+		E95CB0BA1E8C783700ECF938 /* User Add.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0A51E8C783700ECF938 /* User Add.png */; };
+		E95CB0BB1E8C783700ECF938 /* User Add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0A61E8C783700ECF938 /* User Add@2x.png */; };
+		E95CB0BC1E8C783700ECF938 /* User Add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0A71E8C783700ECF938 /* User Add@3x.png */; };
+		E98FF45B1E89740F00A339AA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98FF45A1E89740F00A339AA /* CoreLocation.framework */; };
+		E98FF46B1E89754A00A339AA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98FF46A1E89754A00A339AA /* DetailsViewController.swift */; };
+		E98FF46D1E898B5900A339AA /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98FF46C1E898B5900A339AA /* SizeViewController.swift */; };
+		E999DEB61F02FE1E006CDBC2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E999DEB51F02FE1E006CDBC2 /* LoginController.swift */; };
+		E9DE3B881EF2EA0700E2B522 /* NetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE3B871EF2EA0700E2B522 /* NetworkExtension.swift */; };
+		E9DE3B8A1EF2EACE00E2B522 /* ExtensionTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE3B891EF2EACE00E2B522 /* ExtensionTester.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E928BC541E7EFE09004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC491E7EFE08004A2369 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		E928BC561E7EFE09004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC491E7EFE08004A2369 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		E928BC581E7EFE09004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC491E7EFE08004A2369 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		E928BC5A1E7EFE09004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC491E7EFE08004A2369 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		E928BC5C1E7EFE09004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC491E7EFE08004A2369 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		E928BC5E1E7EFE09004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC491E7EFE08004A2369 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		E928BC601E7EFE09004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC491E7EFE08004A2369 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		E928BC621E7EFE2B004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC491E7EFE08004A2369 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		E928BC8A1E7EFF0B004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC651E7EFF07004A2369 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C9043771AABBFC5001B4E60;
+			remoteInfo = "AlamofireImage iOS";
+		};
+		E928BC8C1E7EFF0B004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC651E7EFF07004A2369 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C9043821AABBFC5001B4E60;
+			remoteInfo = "AlamofireImage iOS Tests";
+		};
+		E928BC8E1E7EFF0B004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC651E7EFF07004A2369 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CE611321AABC24E00D35044;
+			remoteInfo = "AlamofireImage macOS";
+		};
+		E928BC901E7EFF0B004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC651E7EFF07004A2369 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CE611471AABC5C900D35044;
+			remoteInfo = "AlamofireImage macOS Tests";
+		};
+		E928BC921E7EFF0B004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC651E7EFF07004A2369 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C16B37D1BA9399500A66EF0;
+			remoteInfo = "AlamofireImage tvOS";
+		};
+		E928BC941E7EFF0B004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC651E7EFF07004A2369 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C16B3861BA9399500A66EF0;
+			remoteInfo = "AlamofireImage tvOS Tests";
+		};
+		E928BC961E7EFF0B004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC651E7EFF07004A2369 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C4D4EC11B92976900C96855;
+			remoteInfo = "AlamofireImage watchOS";
+		};
+		E928BC991E7EFF27004A2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E928BC651E7EFF07004A2369 /* AlamofireImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C9043761AABBFC5001B4E60;
+			remoteInfo = "AlamofireImage iOS";
+		};
+		E93766061E7EE02D00A34D51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E93765E61E7EE02D00A34D51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E93765ED1E7EE02D00A34D51;
+			remoteInfo = SnapHole;
+		};
+		E93766111E7EE02D00A34D51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E93765E61E7EE02D00A34D51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E93765ED1E7EE02D00A34D51;
+			remoteInfo = SnapHole;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C80402E9B984081F6267BA0 /* Pods_SnapHole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapHole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A91F858C46D96A3EAB53EA34 /* Pods-SnapHole.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapHole.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapHole/Pods-SnapHole.debug.xcconfig"; sourceTree = "<group>"; };
+		BA8A41E76AE0B95A8C9F0894 /* Pods-SnapHole.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapHole.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapHole/Pods-SnapHole.release.xcconfig"; sourceTree = "<group>"; };
+		E928BC491E7EFE08004A2369 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../Downloads/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		E928BC651E7EFF07004A2369 /* AlamofireImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireImage.xcodeproj; path = "../../../Downloads/AlamofireImage-master/AlamofireImage.xcodeproj"; sourceTree = "<group>"; };
+		E93765EE1E7EE02D00A34D51 /* SnapHole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapHole.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93765F11E7EE02D00A34D51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E93765F31E7EE02D00A34D51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E93765F61E7EE02D00A34D51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E93765F91E7EE02D00A34D51 /* SnapHole.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SnapHole.xcdatamodel; sourceTree = "<group>"; };
+		E93765FB1E7EE02D00A34D51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E93765FE1E7EE02D00A34D51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E93766001E7EE02D00A34D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E93766051E7EE02D00A34D51 /* SnapHoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapHoleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93766091E7EE02D00A34D51 /* SnapHoleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapHoleTests.swift; sourceTree = "<group>"; };
+		E937660B1E7EE02D00A34D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E93766101E7EE02D00A34D51 /* SnapHoleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapHoleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93766141E7EE02D00A34D51 /* SnapHoleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapHoleUITests.swift; sourceTree = "<group>"; };
+		E93766161E7EE02D00A34D51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E95CB0931E8C783700ECF938 /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Close.png; path = ../../../Downloads/icons/Close.png; sourceTree = "<group>"; };
+		E95CB0941E8C783700ECF938 /* Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Close@2x.png"; path = "../../../Downloads/icons/Close@2x.png"; sourceTree = "<group>"; };
+		E95CB0951E8C783700ECF938 /* Close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Close@3x.png"; path = "../../../Downloads/icons/Close@3x.png"; sourceTree = "<group>"; };
+		E95CB0961E8C783700ECF938 /* Focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Focus.png; path = ../../../Downloads/icons/Focus.png; sourceTree = "<group>"; };
+		E95CB0971E8C783700ECF938 /* Focus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Focus@2x.png"; path = "../../../Downloads/icons/Focus@2x.png"; sourceTree = "<group>"; };
+		E95CB0981E8C783700ECF938 /* Focus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Focus@3x.png"; path = "../../../Downloads/icons/Focus@3x.png"; sourceTree = "<group>"; };
+		E95CB0991E8C783700ECF938 /* Love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Love.png; path = ../../../Downloads/icons/Love.png; sourceTree = "<group>"; };
+		E95CB09A1E8C783700ECF938 /* Love@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Love@2x.png"; path = "../../../Downloads/icons/Love@2x.png"; sourceTree = "<group>"; };
+		E95CB09B1E8C783700ECF938 /* Love@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Love@3x.png"; path = "../../../Downloads/icons/Love@3x.png"; sourceTree = "<group>"; };
+		E95CB09C1E8C783700ECF938 /* Pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pencil.png; path = ../../../Downloads/icons/Pencil.png; sourceTree = "<group>"; };
+		E95CB09D1E8C783700ECF938 /* Pencil@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pencil@2x.png"; path = "../../../Downloads/icons/Pencil@2x.png"; sourceTree = "<group>"; };
+		E95CB09E1E8C783700ECF938 /* Pencil@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pencil@3x.png"; path = "../../../Downloads/icons/Pencil@3x.png"; sourceTree = "<group>"; };
+		E95CB09F1E8C783700ECF938 /* Picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Picture.png; path = ../../../Downloads/icons/Picture.png; sourceTree = "<group>"; };
+		E95CB0A01E8C783700ECF938 /* Picture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Picture@2x.png"; path = "../../../Downloads/icons/Picture@2x.png"; sourceTree = "<group>"; };
+		E95CB0A11E8C783700ECF938 /* Picture@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Picture@3x.png"; path = "../../../Downloads/icons/Picture@3x.png"; sourceTree = "<group>"; };
+		E95CB0A21E8C783700ECF938 /* Sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sign.png; path = ../../../Downloads/icons/Sign.png; sourceTree = "<group>"; };
+		E95CB0A31E8C783700ECF938 /* Sign@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sign@2x.png"; path = "../../../Downloads/icons/Sign@2x.png"; sourceTree = "<group>"; };
+		E95CB0A41E8C783700ECF938 /* Sign@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sign@3x.png"; path = "../../../Downloads/icons/Sign@3x.png"; sourceTree = "<group>"; };
+		E95CB0A51E8C783700ECF938 /* User Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User Add.png"; path = "../../../Downloads/icons/User Add.png"; sourceTree = "<group>"; };
+		E95CB0A61E8C783700ECF938 /* User Add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User Add@2x.png"; path = "../../../Downloads/icons/User Add@2x.png"; sourceTree = "<group>"; };
+		E95CB0A71E8C783700ECF938 /* User Add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User Add@3x.png"; path = "../../../Downloads/icons/User Add@3x.png"; sourceTree = "<group>"; };
+		E98FF45A1E89740F00A339AA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E98FF46A1E89754A00A339AA /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		E98FF46C1E898B5900A339AA /* SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
+		E999DEB51F02FE1E006CDBC2 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		E9DE3B871EF2EA0700E2B522 /* NetworkExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkExtension.swift; sourceTree = "<group>"; };
+		E9DE3B891EF2EACE00E2B522 /* ExtensionTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTester.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E93765EB1E7EE02D00A34D51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E98FF45B1E89740F00A339AA /* CoreLocation.framework in Frameworks */,
+				E928BC981E7EFF1D004A2369 /* AlamofireImage.framework in Frameworks */,
+				E928BC641E7EFE3B004A2369 /* Alamofire.framework in Frameworks */,
+				5C7B8EBA87CE35261F10A7CF /* Pods_SnapHole.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E93766021E7EE02D00A34D51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E937660D1E7EE02D00A34D51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16F8A890853C26E9A859B247 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E98FF45A1E89740F00A339AA /* CoreLocation.framework */,
+				9C80402E9B984081F6267BA0 /* Pods_SnapHole.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B00B78A75BDCACD3E09761B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A91F858C46D96A3EAB53EA34 /* Pods-SnapHole.debug.xcconfig */,
+				BA8A41E76AE0B95A8C9F0894 /* Pods-SnapHole.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E928BC4A1E7EFE08004A2369 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E928BC551E7EFE09004A2369 /* Alamofire.framework */,
+				E928BC571E7EFE09004A2369 /* Alamofire iOS Tests.xctest */,
+				E928BC591E7EFE09004A2369 /* Alamofire.framework */,
+				E928BC5B1E7EFE09004A2369 /* Alamofire macOS Tests.xctest */,
+				E928BC5D1E7EFE09004A2369 /* Alamofire.framework */,
+				E928BC5F1E7EFE09004A2369 /* Alamofire tvOS Tests.xctest */,
+				E928BC611E7EFE09004A2369 /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E928BC801E7EFF0B004A2369 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E928BC8B1E7EFF0B004A2369 /* AlamofireImage.framework */,
+				E928BC8D1E7EFF0B004A2369 /* AlamofireImage iOS Tests.xctest */,
+				E928BC8F1E7EFF0B004A2369 /* AlamofireImage.framework */,
+				E928BC911E7EFF0B004A2369 /* AlamofireImage macOS Tests.xctest */,
+				E928BC931E7EFF0B004A2369 /* AlamofireImage.framework */,
+				E928BC951E7EFF0B004A2369 /* AlamofireImage tvOS Tests.xctest */,
+				E928BC971E7EFF0B004A2369 /* AlamofireImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E93765E51E7EE02D00A34D51 = {
+			isa = PBXGroup;
+			children = (
+				E9DE3B871EF2EA0700E2B522 /* NetworkExtension.swift */,
+				E95CB0841E8C781F00ECF938 /* Resources */,
+				E928BC651E7EFF07004A2369 /* AlamofireImage.xcodeproj */,
+				E928BC491E7EFE08004A2369 /* Alamofire.xcodeproj */,
+				E93765F01E7EE02D00A34D51 /* SnapHole */,
+				E93766081E7EE02D00A34D51 /* SnapHoleTests */,
+				E93766131E7EE02D00A34D51 /* SnapHoleUITests */,
+				E93765EF1E7EE02D00A34D51 /* Products */,
+				B00B78A75BDCACD3E09761B7 /* Pods */,
+				16F8A890853C26E9A859B247 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E93765EF1E7EE02D00A34D51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E93765EE1E7EE02D00A34D51 /* SnapHole.app */,
+				E93766051E7EE02D00A34D51 /* SnapHoleTests.xctest */,
+				E93766101E7EE02D00A34D51 /* SnapHoleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E93765F01E7EE02D00A34D51 /* SnapHole */ = {
+			isa = PBXGroup;
+			children = (
+				E93765F11E7EE02D00A34D51 /* AppDelegate.swift */,
+				E93765F31E7EE02D00A34D51 /* ViewController.swift */,
+				E98FF46C1E898B5900A339AA /* SizeViewController.swift */,
+				E98FF46A1E89754A00A339AA /* DetailsViewController.swift */,
+				E93765F51E7EE02D00A34D51 /* Main.storyboard */,
+				E93765FB1E7EE02D00A34D51 /* Assets.xcassets */,
+				E93765FD1E7EE02D00A34D51 /* LaunchScreen.storyboard */,
+				E93766001E7EE02D00A34D51 /* Info.plist */,
+				E93765F81E7EE02D00A34D51 /* SnapHole.xcdatamodeld */,
+				E9DE3B891EF2EACE00E2B522 /* ExtensionTester.swift */,
+				E999DEB51F02FE1E006CDBC2 /* LoginController.swift */,
+			);
+			path = SnapHole;
+			sourceTree = "<group>";
+		};
+		E93766081E7EE02D00A34D51 /* SnapHoleTests */ = {
+			isa = PBXGroup;
+			children = (
+				E93766091E7EE02D00A34D51 /* SnapHoleTests.swift */,
+				E937660B1E7EE02D00A34D51 /* Info.plist */,
+			);
+			path = SnapHoleTests;
+			sourceTree = "<group>";
+		};
+		E93766131E7EE02D00A34D51 /* SnapHoleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E93766141E7EE02D00A34D51 /* SnapHoleUITests.swift */,
+				E93766161E7EE02D00A34D51 /* Info.plist */,
+			);
+			path = SnapHoleUITests;
+			sourceTree = "<group>";
+		};
+		E95CB0841E8C781F00ECF938 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E95CB0931E8C783700ECF938 /* Close.png */,
+				E95CB0941E8C783700ECF938 /* Close@2x.png */,
+				E95CB0951E8C783700ECF938 /* Close@3x.png */,
+				E95CB0961E8C783700ECF938 /* Focus.png */,
+				E95CB0971E8C783700ECF938 /* Focus@2x.png */,
+				E95CB0981E8C783700ECF938 /* Focus@3x.png */,
+				E95CB0991E8C783700ECF938 /* Love.png */,
+				E95CB09A1E8C783700ECF938 /* Love@2x.png */,
+				E95CB09B1E8C783700ECF938 /* Love@3x.png */,
+				E95CB09C1E8C783700ECF938 /* Pencil.png */,
+				E95CB09D1E8C783700ECF938 /* Pencil@2x.png */,
+				E95CB09E1E8C783700ECF938 /* Pencil@3x.png */,
+				E95CB09F1E8C783700ECF938 /* Picture.png */,
+				E95CB0A01E8C783700ECF938 /* Picture@2x.png */,
+				E95CB0A11E8C783700ECF938 /* Picture@3x.png */,
+				E95CB0A21E8C783700ECF938 /* Sign.png */,
+				E95CB0A31E8C783700ECF938 /* Sign@2x.png */,
+				E95CB0A41E8C783700ECF938 /* Sign@3x.png */,
+				E95CB0A51E8C783700ECF938 /* User Add.png */,
+				E95CB0A61E8C783700ECF938 /* User Add@2x.png */,
+				E95CB0A71E8C783700ECF938 /* User Add@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E93765ED1E7EE02D00A34D51 /* SnapHole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E93766191E7EE02D00A34D51 /* Build configuration list for PBXNativeTarget "SnapHole" */;
+			buildPhases = (
+				A0BE2E97C6A4AC3443E637FE /* [CP] Check Pods Manifest.lock */,
+				E93765EA1E7EE02D00A34D51 /* Sources */,
+				E93765EB1E7EE02D00A34D51 /* Frameworks */,
+				E93765EC1E7EE02D00A34D51 /* Resources */,
+				52551464CB1F09AC02354C43 /* [CP] Embed Pods Frameworks */,
+				F5DD1103BD718C351BC72A09 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E928BC9A1E7EFF27004A2369 /* PBXTargetDependency */,
+				E928BC631E7EFE2B004A2369 /* PBXTargetDependency */,
+			);
+			name = SnapHole;
+			productName = SnapHole;
+			productReference = E93765EE1E7EE02D00A34D51 /* SnapHole.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E93766041E7EE02D00A34D51 /* SnapHoleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E937661C1E7EE02D00A34D51 /* Build configuration list for PBXNativeTarget "SnapHoleTests" */;
+			buildPhases = (
+				E93766011E7EE02D00A34D51 /* Sources */,
+				E93766021E7EE02D00A34D51 /* Frameworks */,
+				E93766031E7EE02D00A34D51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E93766071E7EE02D00A34D51 /* PBXTargetDependency */,
+			);
+			name = SnapHoleTests;
+			productName = SnapHoleTests;
+			productReference = E93766051E7EE02D00A34D51 /* SnapHoleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E937660F1E7EE02D00A34D51 /* SnapHoleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E937661F1E7EE02D00A34D51 /* Build configuration list for PBXNativeTarget "SnapHoleUITests" */;
+			buildPhases = (
+				E937660C1E7EE02D00A34D51 /* Sources */,
+				E937660D1E7EE02D00A34D51 /* Frameworks */,
+				E937660E1E7EE02D00A34D51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E93766121E7EE02D00A34D51 /* PBXTargetDependency */,
+			);
+			name = SnapHoleUITests;
+			productName = SnapHoleUITests;
+			productReference = E93766101E7EE02D00A34D51 /* SnapHoleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E93765E61E7EE02D00A34D51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Thomas Devisscher";
+				TargetAttributes = {
+					E93765ED1E7EE02D00A34D51 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U8HTXG8Y98;
+						ProvisioningStyle = Automatic;
+					};
+					E93766041E7EE02D00A34D51 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U8HTXG8Y98;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E93765ED1E7EE02D00A34D51;
+					};
+					E937660F1E7EE02D00A34D51 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U8HTXG8Y98;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E93765ED1E7EE02D00A34D51;
+					};
+				};
+			};
+			buildConfigurationList = E93765E91E7EE02D00A34D51 /* Build configuration list for PBXProject "SnapHole" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E93765E51E7EE02D00A34D51;
+			productRefGroup = E93765EF1E7EE02D00A34D51 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E928BC4A1E7EFE08004A2369 /* Products */;
+					ProjectRef = E928BC491E7EFE08004A2369 /* Alamofire.xcodeproj */;
+				},
+				{
+					ProductGroup = E928BC801E7EFF0B004A2369 /* Products */;
+					ProjectRef = E928BC651E7EFF07004A2369 /* AlamofireImage.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E93765ED1E7EE02D00A34D51 /* SnapHole */,
+				E93766041E7EE02D00A34D51 /* SnapHoleTests */,
+				E937660F1E7EE02D00A34D51 /* SnapHoleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E928BC551E7EFE09004A2369 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = E928BC541E7EFE09004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC571E7EFE09004A2369 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = E928BC561E7EFE09004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC591E7EFE09004A2369 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = E928BC581E7EFE09004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC5B1E7EFE09004A2369 /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = E928BC5A1E7EFE09004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC5D1E7EFE09004A2369 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = E928BC5C1E7EFE09004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC5F1E7EFE09004A2369 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = E928BC5E1E7EFE09004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC611E7EFE09004A2369 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = E928BC601E7EFE09004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC8B1E7EFF0B004A2369 /* AlamofireImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireImage.framework;
+			remoteRef = E928BC8A1E7EFF0B004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC8D1E7EFF0B004A2369 /* AlamofireImage iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AlamofireImage iOS Tests.xctest";
+			remoteRef = E928BC8C1E7EFF0B004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC8F1E7EFF0B004A2369 /* AlamofireImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireImage.framework;
+			remoteRef = E928BC8E1E7EFF0B004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC911E7EFF0B004A2369 /* AlamofireImage macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AlamofireImage macOS Tests.xctest";
+			remoteRef = E928BC901E7EFF0B004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC931E7EFF0B004A2369 /* AlamofireImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireImage.framework;
+			remoteRef = E928BC921E7EFF0B004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC951E7EFF0B004A2369 /* AlamofireImage tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AlamofireImage tvOS Tests.xctest";
+			remoteRef = E928BC941E7EFF0B004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E928BC971E7EFF0B004A2369 /* AlamofireImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireImage.framework;
+			remoteRef = E928BC961E7EFF0B004A2369 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E93765EC1E7EE02D00A34D51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E95CB0AA1E8C783700ECF938 /* Close@3x.png in Resources */,
+				E95CB0AF1E8C783700ECF938 /* Love@2x.png in Resources */,
+				E95CB0AC1E8C783700ECF938 /* Focus@2x.png in Resources */,
+				E95CB0AB1E8C783700ECF938 /* Focus.png in Resources */,
+				E95CB0B91E8C783700ECF938 /* Sign@3x.png in Resources */,
+				E95CB0B61E8C783700ECF938 /* Picture@3x.png in Resources */,
+				E95CB0B51E8C783700ECF938 /* Picture@2x.png in Resources */,
+				E95CB0A91E8C783700ECF938 /* Close@2x.png in Resources */,
+				E95CB0B31E8C783700ECF938 /* Pencil@3x.png in Resources */,
+				E95CB0AD1E8C783700ECF938 /* Focus@3x.png in Resources */,
+				E93765FF1E7EE02D00A34D51 /* LaunchScreen.storyboard in Resources */,
+				E95CB0B71E8C783700ECF938 /* Sign.png in Resources */,
+				E95CB0B11E8C783700ECF938 /* Pencil.png in Resources */,
+				E95CB0B01E8C783700ECF938 /* Love@3x.png in Resources */,
+				E95CB0B41E8C783700ECF938 /* Picture.png in Resources */,
+				E93765FC1E7EE02D00A34D51 /* Assets.xcassets in Resources */,
+				E95CB0AE1E8C783700ECF938 /* Love.png in Resources */,
+				E95CB0BA1E8C783700ECF938 /* User Add.png in Resources */,
+				E95CB0A81E8C783700ECF938 /* Close.png in Resources */,
+				E95CB0BB1E8C783700ECF938 /* User Add@2x.png in Resources */,
+				E95CB0B81E8C783700ECF938 /* Sign@2x.png in Resources */,
+				E95CB0BC1E8C783700ECF938 /* User Add@3x.png in Resources */,
+				E93765F71E7EE02D00A34D51 /* Main.storyboard in Resources */,
+				E95CB0B21E8C783700ECF938 /* Pencil@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E93766031E7EE02D00A34D51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E937660E1E7EE02D00A34D51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52551464CB1F09AC02354C43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapHole/Pods-SnapHole-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0BE2E97C6A4AC3443E637FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F5DD1103BD718C351BC72A09 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapHole/Pods-SnapHole-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E93765EA1E7EE02D00A34D51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E93765FA1E7EE02D00A34D51 /* SnapHole.xcdatamodeld in Sources */,
+				E98FF46D1E898B5900A339AA /* SizeViewController.swift in Sources */,
+				E93765F41E7EE02D00A34D51 /* ViewController.swift in Sources */,
+				E9DE3B8A1EF2EACE00E2B522 /* ExtensionTester.swift in Sources */,
+				E93765F21E7EE02D00A34D51 /* AppDelegate.swift in Sources */,
+				E999DEB61F02FE1E006CDBC2 /* LoginController.swift in Sources */,
+				E9DE3B881EF2EA0700E2B522 /* NetworkExtension.swift in Sources */,
+				E98FF46B1E89754A00A339AA /* DetailsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E93766011E7EE02D00A34D51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E937660A1E7EE02D00A34D51 /* SnapHoleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E937660C1E7EE02D00A34D51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E93766151E7EE02D00A34D51 /* SnapHoleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E928BC631E7EFE2B004A2369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = E928BC621E7EFE2B004A2369 /* PBXContainerItemProxy */;
+		};
+		E928BC9A1E7EFF27004A2369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AlamofireImage iOS";
+			targetProxy = E928BC991E7EFF27004A2369 /* PBXContainerItemProxy */;
+		};
+		E93766071E7EE02D00A34D51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E93765ED1E7EE02D00A34D51 /* SnapHole */;
+			targetProxy = E93766061E7EE02D00A34D51 /* PBXContainerItemProxy */;
+		};
+		E93766121E7EE02D00A34D51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E93765ED1E7EE02D00A34D51 /* SnapHole */;
+			targetProxy = E93766111E7EE02D00A34D51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E93765F51E7EE02D00A34D51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E93765F61E7EE02D00A34D51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E93765FD1E7EE02D00A34D51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E93765FE1E7EE02D00A34D51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E93766171E7EE02D00A34D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E93766181E7EE02D00A34D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E937661A1E7EE02D00A34D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A91F858C46D96A3EAB53EA34 /* Pods-SnapHole.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U8HTXG8Y98;
+				INFOPLIST_FILE = SnapHole/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdevisscher.SnapHole.SnapHole;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E937661B1E7EE02D00A34D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA8A41E76AE0B95A8C9F0894 /* Pods-SnapHole.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U8HTXG8Y98;
+				INFOPLIST_FILE = SnapHole/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdevisscher.SnapHole.SnapHole;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E937661D1E7EE02D00A34D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = U8HTXG8Y98;
+				INFOPLIST_FILE = SnapHoleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdevisscher.SnapHole.SnapHoleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapHole.app/SnapHole";
+			};
+			name = Debug;
+		};
+		E937661E1E7EE02D00A34D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = U8HTXG8Y98;
+				INFOPLIST_FILE = SnapHoleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdevisscher.SnapHole.SnapHoleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapHole.app/SnapHole";
+			};
+			name = Release;
+		};
+		E93766201E7EE02D00A34D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U8HTXG8Y98;
+				INFOPLIST_FILE = SnapHoleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdevisscher.SnapHole.SnapHoleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SnapHole;
+			};
+			name = Debug;
+		};
+		E93766211E7EE02D00A34D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U8HTXG8Y98;
+				INFOPLIST_FILE = SnapHoleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tdevisscher.SnapHole.SnapHoleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SnapHole;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E93765E91E7EE02D00A34D51 /* Build configuration list for PBXProject "SnapHole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E93766171E7EE02D00A34D51 /* Debug */,
+				E93766181E7EE02D00A34D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E93766191E7EE02D00A34D51 /* Build configuration list for PBXNativeTarget "SnapHole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E937661A1E7EE02D00A34D51 /* Debug */,
+				E937661B1E7EE02D00A34D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E937661C1E7EE02D00A34D51 /* Build configuration list for PBXNativeTarget "SnapHoleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E937661D1E7EE02D00A34D51 /* Debug */,
+				E937661E1E7EE02D00A34D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E937661F1E7EE02D00A34D51 /* Build configuration list for PBXNativeTarget "SnapHoleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E93766201E7EE02D00A34D51 /* Debug */,
+				E93766211E7EE02D00A34D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E93765F81E7EE02D00A34D51 /* SnapHole.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E93765F91E7EE02D00A34D51 /* SnapHole.xcdatamodel */,
+			);
+			currentVersion = E93765F91E7EE02D00A34D51 /* SnapHole.xcdatamodel */;
+			path = SnapHole.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E93765E61E7EE02D00A34D51 /* Project object */;
+}
