@@ -10,8 +10,10 @@ import UIKit
 import Alamofire
 import CoreLocation
 import MapKit
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate  {
-    
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
+
+CLLocationManagerDelegate  {
+    let API_ENDPOINT = "https://ott311.esdev.xyz"
     // This uuid should be passed on through all screens
     var uuid = UUID().uuidString
     var lat = String()
@@ -33,7 +35,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let location = locations[0]
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+        //let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         self.uuidLabel.text = uuid
         self.latLabel.text = "\(location.coordinate.latitude)"
         self.longLabel.text = "\(location.coordinate.longitude)"
@@ -86,8 +88,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func initiateUpload(){
         let parameters = ["uuid": self.uuid, "lat": latLabel.text ?? "45", "long":longLabel.text ?? "75"]
-        Alamofire.request("https://ott311.esdev.xyz/sr_information", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-            .responseJSON { response in
+        Alamofire.request("\(API_ENDPOINT)/sr_information", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseString { response in
                 switch response.result {
                 case .success:
                     print("Validation Successful")
@@ -104,7 +106,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         Alamofire.upload(multipartFormData: { (multipartFormData) in
         multipartFormData.append(UIImageJPEGRepresentation(self.pickedImage.image!, 0.5)!, withName: "userPhoto", fileName: self.uuid, mimeType: "image/jpeg")
         
-    }, to:"https://ott311.esdev.xyz/sr")
+    }, to:"\(API_ENDPOINT)/sr")
     { (result) in
     switch result {
             case .success(let upload, _, _):
@@ -113,10 +115,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 //Print progress
             })
     
-            upload.responseJSON { response in
+            upload.responseString { response in
                 //print response.result
             }
-            case .failure(let encodingError): break
+            case .failure(let _): break
                 // self.delegate?.showFailAlert()
                 // print(encodingError)
 

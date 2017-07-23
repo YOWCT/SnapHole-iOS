@@ -8,12 +8,13 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class SizeViewController: UIViewController {
     
     @IBOutlet weak var uuidLabel: UILabel!
     var uuid = String()
-    
+    let API_ENDPOINT = "https://ott311.esdev.xyz"
     override func viewDidLoad() {
         self.uuidLabel.text = uuid
         
@@ -27,16 +28,35 @@ class SizeViewController: UIViewController {
     }
     
     @IBAction func largeButton(_ sender: UIButton) {
+        specifySize(size: "large")
         self.performSegue(withIdentifier: "toDetailsView", sender: nil)
     }
     
     @IBAction func mediumButton(_ sender: UIButton) {
+        specifySize(size: "medium")
         self.performSegue(withIdentifier: "toDetailsView", sender: nil)
     }
     
     @IBAction func smallButton(_ sender: UIButton) {
+        specifySize(size: "small")
         self.performSegue(withIdentifier: "toDetailsView", sender: nil)
     }
+    
+    func specifySize(size: String){
+        let parameters = ["uuid": self.uuid, "size": size] as [String : Any]
+        Alamofire.request("\(API_ENDPOINT)/size", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseString { response in
+                switch response.result {
+                case .success:
+                    print("Validation Successful")
+                case .failure(let error):
+                    print(error)
+                }
+                print(response)
+                
+        }
+    }
+    
 }
 
 
