@@ -109,7 +109,7 @@
                         <outlet property="longLabel" destination="BdA-rc-zYI" id="bj7-nj-e6A"/>
                         <outlet property="pickedImage" destination="D8b-dR-Okn" id="rPa-Yx-3J4"/>
                         <outlet property="uuidLabel" destination="Tpo-Ga-KBI" id="FgE-4Z-8qu"/>
-                        <segue destination="EmC-de-N22" kind="show" identifier="toSizeView" id="EzQ-DK-3Gw"/>
+                        <segue destination="C6f-IH-dp2" kind="show" identifier="toSizeView" id="bIC-dh-nug"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -290,7 +290,7 @@
                                     <constraint firstAttribute="height" constant="100" id="h04-a4-k48"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
-                                <state key="normal" title="SMALL" backgroundImage="Close.png">
+                                <state key="normal" title="SMALL">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -361,12 +361,59 @@
                     <connections>
                         <outlet property="UuidLabel" destination="uO2-pH-oVd" id="Arj-Q9-oQv"/>
                         <outlet property="uuidLabel" destination="uO2-pH-oVd" id="UBp-Km-fsu"/>
-                        <segue destination="dDw-1u-cAV" kind="show" identifier="toDetailsView" id="FOp-Oq-cAw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tjr-ha-kpf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478" y="439"/>
+            <point key="canvasLocation" x="367" y="1543"/>
+        </scene>
+        <!--Table Size View Controller-->
+        <scene sceneID="C6V-Qd-lnK">
+            <objects>
+                <tableViewController id="C6f-IH-dp2" customClass="tableSizeViewController" customModule="SnapHole" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="27" sectionHeaderHeight="28" sectionFooterHeight="28" id="QwY-Sg-d1s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" id="zjh-uC-Cvm" customClass="headerCell" customModule="SnapHole" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="27"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zjh-uC-Cvm" id="DBL-qc-dxe" customClass="headerCell" customModule="SnapHole" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="26.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How big is the pothole" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xR2-PD-Lmv">
+                                            <rect key="frame" x="19" y="3" width="348" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xR2-PD-Lmv" firstAttribute="centerY" secondItem="zjh-uC-Cvm" secondAttribute="centerY" id="37V-g3-voe"/>
+                                    <constraint firstItem="xR2-PD-Lmv" firstAttribute="leading" secondItem="zjh-uC-Cvm" secondAttribute="leading" constant="19" id="3Nl-ft-XCM"/>
+                                    <constraint firstAttribute="trailing" secondItem="xR2-PD-Lmv" secondAttribute="trailing" constant="8" id="cOj-v1-NE5"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="headerLabel" destination="xR2-PD-Lmv" id="gqX-bi-34S"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="C6f-IH-dp2" id="Qfq-kl-EEY"/>
+                            <outlet property="delegate" destination="C6f-IH-dp2" id="1od-ai-JCQ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="dDw-1u-cAV" kind="show" identifier="toDetailView" id="VZn-MQ-xgv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ahw-dj-Eun" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464.80000000000001" y="774.96251874062978"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="tt1-x2-GlL">
@@ -472,11 +519,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coK-An-bwD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="439"/>
+            <point key="canvasLocation" x="2174" y="658"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Close.png" width="11" height="11"/>
         <image name="Focus.png" width="76" height="76"/>
         <image name="send_grey_192x192" width="192" height="192"/>
     </resources>

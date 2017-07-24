@@ -39,9 +39,16 @@
 		E95CB0BA1E8C783700ECF938 /* User Add.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0A51E8C783700ECF938 /* User Add.png */; };
 		E95CB0BB1E8C783700ECF938 /* User Add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0A61E8C783700ECF938 /* User Add@2x.png */; };
 		E95CB0BC1E8C783700ECF938 /* User Add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CB0A71E8C783700ECF938 /* User Add@3x.png */; };
+		E9737E841F24FD95007E5AE3 /* AmericanTypewriter.ttc in Resources */ = {isa = PBXBuildFile; fileRef = E9737E801F24FD95007E5AE3 /* AmericanTypewriter.ttc */; };
+		E9737E851F24FD95007E5AE3 /* App icon in Resources */ = {isa = PBXBuildFile; fileRef = E9737E811F24FD95007E5AE3 /* App icon */; };
+		E9737E861F24FD95007E5AE3 /* Consolas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9737E821F24FD95007E5AE3 /* Consolas.ttf */; };
+		E9737E871F24FD95007E5AE3 /* size_illustration in Resources */ = {isa = PBXBuildFile; fileRef = E9737E831F24FD95007E5AE3 /* size_illustration */; };
+		E9737E8D1F2504C5007E5AE3 /* tableSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9737E8C1F2504C5007E5AE3 /* tableSizeViewController.swift */; };
+		E9737E901F250A29007E5AE3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9737E8E1F250A29007E5AE3 /* TableViewCell.swift */; };
+		E9737E911F250A29007E5AE3 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9737E8F1F250A29007E5AE3 /* TableViewCell.xib */; };
+		E9737EAB1F254165007E5AE3 /* headerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9737EAA1F254165007E5AE3 /* headerCell.swift */; };
 		E98FF45B1E89740F00A339AA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98FF45A1E89740F00A339AA /* CoreLocation.framework */; };
 		E98FF46B1E89754A00A339AA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98FF46A1E89754A00A339AA /* DetailsViewController.swift */; };
-		E98FF46D1E898B5900A339AA /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98FF46C1E898B5900A339AA /* SizeViewController.swift */; };
 		E999DEB61F02FE1E006CDBC2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E999DEB51F02FE1E006CDBC2 /* LoginController.swift */; };
 		E9DE3B881EF2EA0700E2B522 /* NetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE3B871EF2EA0700E2B522 /* NetworkExtension.swift */; };
 		E9DE3B8A1EF2EACE00E2B522 /* ExtensionTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DE3B891EF2EACE00E2B522 /* ExtensionTester.swift */; };
@@ -217,9 +224,16 @@
 		E95CB0A51E8C783700ECF938 /* User Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User Add.png"; path = "../../../Downloads/icons/User Add.png"; sourceTree = "<group>"; };
 		E95CB0A61E8C783700ECF938 /* User Add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User Add@2x.png"; path = "../../../Downloads/icons/User Add@2x.png"; sourceTree = "<group>"; };
 		E95CB0A71E8C783700ECF938 /* User Add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User Add@3x.png"; path = "../../../Downloads/icons/User Add@3x.png"; sourceTree = "<group>"; };
+		E9737E801F24FD95007E5AE3 /* AmericanTypewriter.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = AmericanTypewriter.ttc; path = Resources/AmericanTypewriter.ttc; sourceTree = "<group>"; };
+		E9737E811F24FD95007E5AE3 /* App icon */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "App icon"; path = "Resources/App icon"; sourceTree = "<group>"; };
+		E9737E821F24FD95007E5AE3 /* Consolas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Consolas.ttf; path = Resources/Consolas.ttf; sourceTree = "<group>"; };
+		E9737E831F24FD95007E5AE3 /* size_illustration */ = {isa = PBXFileReference; lastKnownFileType = folder; name = size_illustration; path = Resources/size_illustration; sourceTree = "<group>"; };
+		E9737E8C1F2504C5007E5AE3 /* tableSizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableSizeViewController.swift; sourceTree = "<group>"; };
+		E9737E8E1F250A29007E5AE3 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		E9737E8F1F250A29007E5AE3 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		E9737EAA1F254165007E5AE3 /* headerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerCell.swift; sourceTree = "<group>"; };
 		E98FF45A1E89740F00A339AA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E98FF46A1E89754A00A339AA /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		E98FF46C1E898B5900A339AA /* SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		E999DEB51F02FE1E006CDBC2 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E9DE3B871EF2EA0700E2B522 /* NetworkExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkExtension.swift; sourceTree = "<group>"; };
 		E9DE3B891EF2EACE00E2B522 /* ExtensionTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTester.swift; sourceTree = "<group>"; };
@@ -329,9 +343,11 @@
 		E93765F01E7EE02D00A34D51 /* SnapHole */ = {
 			isa = PBXGroup;
 			children = (
+				E9737E8E1F250A29007E5AE3 /* TableViewCell.swift */,
+				E9737E8F1F250A29007E5AE3 /* TableViewCell.xib */,
 				E93765F11E7EE02D00A34D51 /* AppDelegate.swift */,
 				E93765F31E7EE02D00A34D51 /* ViewController.swift */,
-				E98FF46C1E898B5900A339AA /* SizeViewController.swift */,
+				E9737E8C1F2504C5007E5AE3 /* tableSizeViewController.swift */,
 				E98FF46A1E89754A00A339AA /* DetailsViewController.swift */,
 				E93765F51E7EE02D00A34D51 /* Main.storyboard */,
 				E93765FB1E7EE02D00A34D51 /* Assets.xcassets */,
@@ -340,6 +356,7 @@
 				E93765F81E7EE02D00A34D51 /* SnapHole.xcdatamodeld */,
 				E9DE3B891EF2EACE00E2B522 /* ExtensionTester.swift */,
 				E999DEB51F02FE1E006CDBC2 /* LoginController.swift */,
+				E9737EAA1F254165007E5AE3 /* headerCell.swift */,
 			);
 			path = SnapHole;
 			sourceTree = "<group>";
@@ -365,6 +382,10 @@
 		E95CB0841E8C781F00ECF938 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E9737E801F24FD95007E5AE3 /* AmericanTypewriter.ttc */,
+				E9737E811F24FD95007E5AE3 /* App icon */,
+				E9737E821F24FD95007E5AE3 /* Consolas.ttf */,
+				E9737E831F24FD95007E5AE3 /* size_illustration */,
 				E95CB0931E8C783700ECF938 /* Close.png */,
 				E95CB0941E8C783700ECF938 /* Close@2x.png */,
 				E95CB0951E8C783700ECF938 /* Close@3x.png */,
@@ -618,23 +639,28 @@
 			files = (
 				E95CB0AA1E8C783700ECF938 /* Close@3x.png in Resources */,
 				E95CB0AF1E8C783700ECF938 /* Love@2x.png in Resources */,
+				E9737E851F24FD95007E5AE3 /* App icon in Resources */,
 				E95CB0AC1E8C783700ECF938 /* Focus@2x.png in Resources */,
 				E95CB0AB1E8C783700ECF938 /* Focus.png in Resources */,
+				E9737E871F24FD95007E5AE3 /* size_illustration in Resources */,
 				E95CB0B91E8C783700ECF938 /* Sign@3x.png in Resources */,
 				E95CB0B61E8C783700ECF938 /* Picture@3x.png in Resources */,
 				E95CB0B51E8C783700ECF938 /* Picture@2x.png in Resources */,
 				E95CB0A91E8C783700ECF938 /* Close@2x.png in Resources */,
 				E95CB0B31E8C783700ECF938 /* Pencil@3x.png in Resources */,
 				E95CB0AD1E8C783700ECF938 /* Focus@3x.png in Resources */,
+				E9737E841F24FD95007E5AE3 /* AmericanTypewriter.ttc in Resources */,
 				E93765FF1E7EE02D00A34D51 /* LaunchScreen.storyboard in Resources */,
 				E95CB0B71E8C783700ECF938 /* Sign.png in Resources */,
 				E95CB0B11E8C783700ECF938 /* Pencil.png in Resources */,
 				E95CB0B01E8C783700ECF938 /* Love@3x.png in Resources */,
+				E9737E911F250A29007E5AE3 /* TableViewCell.xib in Resources */,
 				E95CB0B41E8C783700ECF938 /* Picture.png in Resources */,
 				E93765FC1E7EE02D00A34D51 /* Assets.xcassets in Resources */,
 				E95CB0AE1E8C783700ECF938 /* Love.png in Resources */,
 				E95CB0BA1E8C783700ECF938 /* User Add.png in Resources */,
 				E95CB0A81E8C783700ECF938 /* Close.png in Resources */,
+				E9737E861F24FD95007E5AE3 /* Consolas.ttf in Resources */,
 				E95CB0BB1E8C783700ECF938 /* User Add@2x.png in Resources */,
 				E95CB0B81E8C783700ECF938 /* Sign@2x.png in Resources */,
 				E95CB0BC1E8C783700ECF938 /* User Add@3x.png in Resources */,
@@ -712,11 +738,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9737E8D1F2504C5007E5AE3 /* tableSizeViewController.swift in Sources */,
 				E93765FA1E7EE02D00A34D51 /* SnapHole.xcdatamodeld in Sources */,
-				E98FF46D1E898B5900A339AA /* SizeViewController.swift in Sources */,
 				E93765F41E7EE02D00A34D51 /* ViewController.swift in Sources */,
 				E9DE3B8A1EF2EACE00E2B522 /* ExtensionTester.swift in Sources */,
+				E9737E901F250A29007E5AE3 /* TableViewCell.swift in Sources */,
 				E93765F21E7EE02D00A34D51 /* AppDelegate.swift in Sources */,
+				E9737EAB1F254165007E5AE3 /* headerCell.swift in Sources */,
 				E999DEB61F02FE1E006CDBC2 /* LoginController.swift in Sources */,
 				E9DE3B881EF2EA0700E2B522 /* NetworkExtension.swift in Sources */,
 				E98FF46B1E89754A00A339AA /* DetailsViewController.swift in Sources */,

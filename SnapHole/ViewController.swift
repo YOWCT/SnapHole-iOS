@@ -25,7 +25,7 @@ CLLocationManagerDelegate  {
     
     @IBOutlet weak var pickedImage: UIImageView!
     let manager = CLLocationManager()
-    
+    let bundleIdentifier = Bundle.main.bundleIdentifier
     
     //service_code:2000164-2
     //attribute[cmb_councillorcheckbox]:Yes_No.Yes
@@ -39,6 +39,7 @@ CLLocationManagerDelegate  {
         self.uuidLabel.text = uuid
         self.latLabel.text = "\(location.coordinate.latitude)"
         self.longLabel.text = "\(location.coordinate.longitude)"
+        print(bundleIdentifier)
         
     }
 
@@ -57,7 +58,7 @@ CLLocationManagerDelegate  {
         // Dispose of any resources that can be recreated.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let DestViewController: SizeViewController = segue.destination as! SizeViewController
+        let DestViewController: tableSizeViewController = segue.destination as! tableSizeViewController
         DestViewController.uuid = uuid
     }
 
