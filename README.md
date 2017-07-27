@@ -1,5 +1,4 @@
-# iOS for Pothole reporting
-
+# SnapHole - iOS mobile application
 
 ## Bundle Information
 
@@ -16,6 +15,7 @@ https://esdev.ca/privacy
 - [Product Naming: What's in a name](https://localizedirect.com/posts/whats-in-a-name)
 
 ## Plans for iOS App Store
+
 - Product name: SnapHole
 - Subtitle: Snap a photo. Report a pothole.
 - Description: An ultra easy to use app to report potholes in the city of Ottawa.
