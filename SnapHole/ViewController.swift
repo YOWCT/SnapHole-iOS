@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import CoreLocation
 import MapKit
+import AVFoundation
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
 
 CLLocationManagerDelegate  {
@@ -17,11 +19,13 @@ CLLocationManagerDelegate  {
     // This uuid should be passed on through all screens
     var uuid = UUID().uuidString
     var lat = String()
-    // Picked image
-    @IBOutlet weak var uuidLabel: UILabel!
-    @IBOutlet weak var latLabel: UILabel!
-    @IBOutlet weak var longLabel: UILabel!
+    var long = String()
     
+    let captureSession = AVCaptureSession()
+    let stillImageOutput = AVCaptureStillImageOutput()
+    var previewLayer : AVCaptureVideoPreviewLayer?
+    
+    var captureDevice : AVCaptureDevice?
     
     @IBOutlet weak var pickedImage: UIImageView!
     let manager = CLLocationManager()
@@ -33,30 +37,94 @@ CLLocationManagerDelegate  {
     //long:-75.78771586
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
-        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let _:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let _:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         //let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
-        self.uuidLabel.text = uuid
-        self.latLabel.text = "\(location.coordinate.latitude)"
-        self.longLabel.text = "\(location.coordinate.longitude)"
-        print(bundleIdentifier)
+        lat = "\(location.coordinate.latitude)"
+        long = "\(location.coordinate.longitude)"
         
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.uuidLabel.text = uuid
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        captureSession.sessionPreset = AVCaptureSession.Preset.high
+    
+        if let cameraID = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.front).devices.first?.localizedName{
+            print(cameraID)
+            beginSession()
+        }
+//        if let devices = AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .back){
+//            // Loop through all the capture devices on this phone
+//            for device in devices {
+//                // Make sure this particular device supports video
+//                if (device.hasMediaType(AVMediaType.video)) {
+//                    // Finally check the position and confirm we've got the back camera
+//                    if(device.position == AVCaptureDevice.Position.back) {
+//                        captureDevice = device
+//                        if captureDevice != nil {
+//                            print("Capture device found")
+//                            beginSession()
+//                        }
+//                    }
+//                }
+//            }
+//        }
     }
+    
+    func beginSession() {
 
+        do {
+            try captureSession.addInput(AVCaptureDeviceInput(device: captureDevice!))
+            stillImageOutput.outputSettings = [AVVideoCodecKey:AVVideoCodecJPEG]
+
+            if captureSession.canAddOutput(stillImageOutput) {
+                captureSession.addOutput(stillImageOutput)
+            }
+
+        }
+        catch {
+            print("error: \(error.localizedDescription)")
+        }
+
+        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession) 
+        // this is what displays the camera view. But - it's on TOP of the drawn view, and under the overview. ??
+        self.view.layer.addSublayer(previewLayer)
+        previewLayer.frame = self.view.layer.frame
+
+
+        pickedImage.frame = self.view.frame
+        //pickedImage.image = self.drawCirclesOnImage(fromImage: nil, targetSize: pickedImage.bounds.size)
+
+        //self.view.bringSubview(toFront: navigationBar)
+        self.view.bringSubview(toFront: pickedImage)
+       // self.view.bringSubview(toFront: btnCapture)
+        // don't use shapeLayer anymore...
+        //      self.view.bringSubview(toFront: shapeLayer)
+
+
+        captureSession.startRunning()
+        print("Capture session running")
+
+    }
+    func getImageWithColor(color: UIColor, size: CGSize) -> UIImage {
+        let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: size.width, height: size.height))
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        color.setFill()
+        UIRectFill(rect)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let DestViewController: tableSizeViewController = segue.destination as! tableSizeViewController
         DestViewController.uuid = uuid
@@ -88,7 +156,7 @@ CLLocationManagerDelegate  {
     }
     
     func initiateUpload(){
-        let parameters = ["uuid": self.uuid, "lat": latLabel.text ?? "45", "long":longLabel.text ?? "75"]
+        let parameters = ["uuid": self.uuid, "lat": lat , "long": long]
         Alamofire.request("\(API_ENDPOINT)/sr_information", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseString { response in
                 switch response.result {
@@ -119,7 +187,7 @@ CLLocationManagerDelegate  {
             upload.responseString { response in
                 //print response.result
             }
-            case .failure(let _): break
+    case .failure( _): break
                 // self.delegate?.showFailAlert()
                 // print(encodingError)
 

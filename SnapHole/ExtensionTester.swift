@@ -8,20 +8,39 @@
 
 import UIKit
 
-class ExtensionTester: UIViewController {
+class ExtensionTester: UIViewController, UINavigationControllerDelegate {
+    
+    
+    @IBOutlet weak var networkStatusLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(statusManager), name: .flagsChanged, object: Network.reachability)
-        updateUserInterface()
+        
+        
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let toViewController: ViewController = segue.destination as! ViewController
+//    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        updateUserInterface()
+        
+    }
+    
     func updateUserInterface() {
         guard let status = Network.reachability?.status else { return }
         switch status {
         case .unreachable:
             view.backgroundColor = .red
+            // show unreachable screen
+            networkStatusLabel.text = "This app requires network connectivity."
         case .wifi:
             view.backgroundColor = .green
+            networkStatusLabel.text = "Network available. (wifi)"
+            self.performSegue(withIdentifier: "toViewControllerSecond", sender: self)
+            // segue to login/register screen
         case .wwan:
+            networkStatusLabel.text = "Network available. (3g/LTE)"
             view.backgroundColor = .yellow
         }
         print("Reachability Summary")
@@ -30,7 +49,7 @@ class ExtensionTester: UIViewController {
         print("Reachable:", Network.reachability?.isReachable ?? "nil")
         print("Wifi:", Network.reachability?.isReachableViaWiFi ?? "nil")
     }
-    func statusManager(_ notification: NSNotification) {
+    @objc func statusManager(_ notification: NSNotification) {
         updateUserInterface()
     }
 }

@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G24b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SDh-VY-JYp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SnapHole" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewContollerSecond" id="BYZ-38-t0r" customClass="ViewController" customModule="SnapHole" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,21 +30,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D8b-dR-Okn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jj8-CY-WYq">
-                                <rect key="frame" x="151" y="591" width="73" height="50"/>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toa-5y-Sj1">
-                                <rect key="frame" x="137" y="283" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="bOf-uf-u2b"/>
-                                    <constraint firstAttribute="height" constant="100" id="wDP-XO-Oiw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" backgroundImage="Focus.png"/>
-                                <connections>
-                                    <action selector="cameraButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ou-Ik-1iw"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCG-Et-x2P">
                                 <rect key="frame" x="311" y="591" width="56" height="56"/>
                                 <constraints>
@@ -52,35 +42,16 @@
                                     <action selector="saveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lpn-hv-UhM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpo-Ga-KBI">
-                                <rect key="frame" x="16" y="82" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grZ-oP-nl1">
-                                <rect key="frame" x="16" y="91" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdA-rc-zYI">
-                                <rect key="frame" x="16" y="100" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsF-vj-P6n">
                                 <rect key="frame" x="116" y="439" width="142" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="See your potholes"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Snap.That.Hole" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR6-nU-YRp">
-                                <rect key="frame" x="0.0" y="28" width="224" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SnapHole.io" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR6-nU-YRp">
+                                <rect key="frame" x="0.0" y="14" width="109" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="9Lw-br-pDx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,27 +59,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jj8-CY-WYq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="591" id="21m-S6-HOw"/>
+                            <constraint firstItem="mR6-nU-YRp" firstAttribute="leading" secondItem="D8b-dR-Okn" secondAttribute="leading" id="3CL-kU-Mhk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mR6-nU-YRp" secondAttribute="bottom" constant="630" id="4Hx-4o-hmz"/>
                             <constraint firstAttribute="bottom" secondItem="TCG-Et-x2P" secondAttribute="bottom" constant="20" symbolic="YES" id="99L-T1-bfb"/>
-                            <constraint firstItem="D8b-dR-Okn" firstAttribute="centerX" secondItem="jj8-CY-WYq" secondAttribute="centerX" id="9iH-Gz-7g1"/>
                             <constraint firstItem="D8b-dR-Okn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BBG-rW-wIS"/>
                             <constraint firstItem="D8b-dR-Okn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Byu-ib-cWj"/>
-                            <constraint firstItem="TCG-Et-x2P" firstAttribute="top" secondItem="jj8-CY-WYq" secondAttribute="top" id="OwA-sE-CqG"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jj8-CY-WYq" secondAttribute="bottom" constant="26" id="RNc-cr-pAH"/>
                             <constraint firstAttribute="trailing" secondItem="D8b-dR-Okn" secondAttribute="trailing" id="VcO-M9-T34"/>
                             <constraint firstItem="D8b-dR-Okn" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="YYo-7l-IIx"/>
-                            <constraint firstItem="TCG-Et-x2P" firstAttribute="leading" secondItem="jj8-CY-WYq" secondAttribute="trailing" constant="87" id="dKA-8x-r8Q"/>
-                            <constraint firstItem="Toa-5y-Sj1" firstAttribute="centerY" secondItem="D8b-dR-Okn" secondAttribute="centerY" id="emX-b1-FkY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TCG-Et-x2P" secondAttribute="trailing" constant="-8" id="oD1-Lr-y3x"/>
-                            <constraint firstItem="Toa-5y-Sj1" firstAttribute="centerX" secondItem="jj8-CY-WYq" secondAttribute="centerX" id="rq6-uK-r4u"/>
+                            <constraint firstItem="mR6-nU-YRp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-6" id="oEV-7b-9Hh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TCG-Et-x2P" secondAttribute="bottom" constant="20" id="ryp-d5-ZQP"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="latLabel" destination="grZ-oP-nl1" id="rzD-Fg-YuY"/>
-                        <outlet property="longLabel" destination="BdA-rc-zYI" id="bj7-nj-e6A"/>
                         <outlet property="pickedImage" destination="D8b-dR-Okn" id="rPa-Yx-3J4"/>
-                        <outlet property="uuidLabel" destination="Tpo-Ga-KBI" id="FgE-4Z-8qu"/>
                         <segue destination="C6f-IH-dp2" kind="show" identifier="toSizeView" id="bIC-dh-nug"/>
                     </connections>
                 </viewController>
@@ -119,7 +83,7 @@
         <!--Extension Tester-->
         <scene sceneID="u5y-aC-P3K">
             <objects>
-                <viewController id="SDh-VY-JYp" customClass="ExtensionTester" customModule="SnapHole" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewControllerFirst" id="SDh-VY-JYp" customClass="ExtensionTester" customModule="SnapHole" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WDN-Xf-fui"/>
                         <viewControllerLayoutGuide type="bottom" id="3eU-ga-KNC"/>
@@ -128,20 +92,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Extension Tester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1e4-bu-WVH">
-                                <rect key="frame" x="124" y="170" width="127" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extension Tester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1e4-bu-WVH">
+                                <rect key="frame" x="124" y="323" width="127" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1e4-bu-WVH" firstAttribute="centerX" secondItem="c68-zw-aXM" secondAttribute="centerX" id="1VR-WT-U8K"/>
+                            <constraint firstItem="1e4-bu-WVH" firstAttribute="centerY" secondItem="c68-zw-aXM" secondAttribute="centerY" id="Uk8-t9-ydt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="networkStatusLabel" destination="1e4-bu-WVH" id="Uwa-1n-McK"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerSecond" id="MeX-6L-W7y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2w-M7-5Z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-782" y="-323"/>
+            <point key="canvasLocation" x="-1022" y="439"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="0BU-ip-Abk">
@@ -383,7 +354,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="26.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How big is the pothole" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xR2-PD-Lmv">
+                                        <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of request is this?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xR2-PD-Lmv">
                                             <rect key="frame" x="19" y="3" width="348" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -413,7 +384,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ahw-dj-Eun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464.80000000000001" y="774.96251874062978"/>
+            <point key="canvasLocation" x="628" y="439"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="tt1-x2-GlL">
@@ -519,11 +490,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coK-An-bwD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="658"/>
+            <point key="canvasLocation" x="1356" y="439"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Focus.png" width="76" height="76"/>
         <image name="send_grey_192x192" width="192" height="192"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MeX-6L-W7y"/>
+    </inferredMetricsTieBreakers>
 </document>
